@@ -1,0 +1,38 @@
+/* Pour s'assurer que l'affichage est adapté aux mobiles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.centered-div {
+    /* Taille fixe pour le div */
+    width: 600px;
+    height: 900px;
+
+    /* Centrer le div */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Style du div */
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* Pour qu'il reste fixe sur mobile */
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 480px) {
+    /* Pour un appareil mobile en mode vertical */
+    .centered-div {
+        width: 100%; /* Le div occupera toute la largeur de l'écran */
+        max-width: 300px; /* Limiter la largeur maximum */
+        height: 300px; /* La hauteur reste fixe */
+    }
+}
