@@ -36,3 +36,90 @@ html, body {
         height: 300px; /* La hauteur reste fixe */
     }
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 100vh;
+}
+
+.grid-item {
+    background-color: lightblue;
+    border: 1px solid black;
+    position: relative; /* Permet de positionner le contenu à l'intérieur */
+}
+
+/* Bloc central fusionné */
+.large-cell {
+    grid-column: 2;
+    grid-row: 2 / span 3;
+    background-color: lightcoral;
+}
+
+/* Positionnement du nom du client en haut à gauche */
+.client-name {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Centre les cases horizontalement */
+    gap: 20px; /* Espace entre les deux cases, ajuste la valeur selon tes besoins */
+    margin-top: 10px;
+}
+
+/* Style pour les cases des cartes */
+.card-placeholder {
+    width: 60px; /* Largeur fixe pour chaque case */
+    height: 90px;
+    background-color: lightgray;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: darkgray;
+}
+
+/* Conteneur pour les labels de message */
+.message-container {
+    display: flex;
+    justify-content: center; /* Centre les labels horizontalement */
+    gap: 20px; /* Espace entre les labels, ajuste la valeur selon tes besoins */
+    margin-top: 10px; /* Espace au-dessus des labels */
+}
+
+/* Style des labels de message */
+.message-label {
+    width: 150px; /* Largeur fixe pour chaque label */
+    height: 50px; /* Hauteur fixe, ajuste selon le contenu */
+    background-color: lightyellow; /* Couleur de fond pour le label */
+    border: 1px solid black; /* Bordure autour du label */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Poids de la police pour plus de visibilité */
+    color: black; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+}
+/* en bas des carte des clients*/
+.client-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px;
+    background-color: #f9f9f9;
+    width: 300px;
+}
+
+.client-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
